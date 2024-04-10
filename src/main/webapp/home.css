@@ -1,0 +1,17 @@
+/* @charset "ISO-8859-1";
+body{
+	text-align: center;
+}
+.collection{
+	height: 60vmin;
+	border: 2px solid red;
+	text-align: center;
+	
+}
+
+button{
+	height: 5rem;
+	width: 5rem;
+	gap: 5rem 5rem ;
+	
+} */

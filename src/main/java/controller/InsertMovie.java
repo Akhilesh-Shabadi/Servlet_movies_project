@@ -46,7 +46,7 @@ public class InsertMovie extends HttpServlet {
 			MoviesDao dao=new MoviesDao();
 			dao.saveMovie(movies);
 			
-			resp.getWriter().print("<h1> Movie added to Database</h1>");
+			resp.getWriter().print("<h1 style='color:green'> Movie added to Database</h1>");
 			req.getRequestDispatcher("home.html").include(req, resp);
 			
 			

@@ -7,26 +7,27 @@
 <body>
 	<h1 style="text-align: center;">Add movie</h1>
 	<div style="display: flex; align-items: left; justify-content: center;">
-		<form action="insert-movie" method="post" enctype="multipart/form-data">
+		<form action="insert-movie" method="post"
+			enctype="multipart/form-data">
 			Movie-Name: <input type="text" name="moviename"
 				placeholder="enter movie name" required> <br> <br>
 			Movie-Language: <select name="language" required>
 				<option disabled selected value=>Select Language</option>
-				<option value="english">English</option>
-				<option value="hindi">Hindi</option>
-				<option value="kannada">Kannada</option>
-			</select> <br> <br> 
-			Rating: <!-- <input type="radio"> <input
+				<option>English</option>
+				<option>Hindi</option>
+				<option>Kannada</option>
+			</select> <br> <br> Rating:
+			<!-- <input type="radio"> <input
 				type="radio"> <input type="radio"> <input
 				type="radio"> <input type="radio"> -->
-				<input type="text" name="rating" placeholder="rating" required> <br> <br>
-			Image: <input type="file" name="image" placeholder="insert image" required>
-			<br> <br> 
+			<input type="text" name="rating" placeholder="rating" required>
+			<br> <br> Image: <input type="file" name="image"
+				placeholder="insert image" required> <br> <br>
 			Genre: <select name="genre" required="required">
 				<option disabled selected value=>Select a Genre</option>
 				<option>Horror</option>
 				<option>Comedy</option>
-				<option>Action</option>
+				<option value="action">Action</option>
 				<option>Thriller</option>
 			</select> <br> <br>
 			<button formaction="">ADD</button>

@@ -32,4 +32,30 @@ public class MoviesDao {
 	public List<Movies> fetchall() {
 		return manager.createQuery("select s from Movies s").getResultList();
 	}
+
+	public List<Movies> fetch(String name) {
+		return manager.createQuery("select s from Movies s where name = ?1").setParameter(1, name).getResultList();
+	}
+
+	public List<Movies> rating(double rating) {
+		return manager.createQuery("select s from Movies s where rating >= ?1").setParameter(1, rating).getResultList();
+	}
+
+	public List<Movies> id(int id) {
+		return manager.createQuery("select s from Movies s where id = ?1").setParameter(1, id).getResultList();
+	}
+
+	public List<Movies> lang(String lang) {
+		return manager.createQuery("select s from Movies s where language = ?1").setParameter(1, lang).getResultList();
+	}
+
+	public List<Movies> genre(String genre) {
+		return manager.createQuery("select s from Movies s where genre = ?1").setParameter(1, genre).getResultList();
+	}
+
+	public void deletemovie(int id) {
+		transaction.begin();
+		manager.remove(manager.find(Movies.class, id));
+		transaction.commit();
+	}
 }

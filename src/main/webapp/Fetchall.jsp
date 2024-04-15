@@ -1,3 +1,4 @@
+<%@page import="org.apache.commons.codec.binary.Base64"%>
 <%@page import="dao.MoviesDao"%>
 <%@page import="dto.Movies"%>
 <%@page import="java.util.List"%>
@@ -12,10 +13,9 @@
 <body>
 	<%
 	List<Movies> list = (List<Movies>) request.getAttribute("list");
+	/* Movies dao = new Movies(); */
 	%>
-	<%
-	Movies dao = new Movies();
-	%>
+
 	<h1 align='center'>Movies Details</h1>
 	<table border="1px" align='center'>
 		<tr>
@@ -35,13 +35,12 @@
 			<td><%=mo.getLanguage()%></td>
 			<td><%=mo.getGenre()%></td>
 			<td><%=mo.getRating()%></td>
-			<td><img height="60px" width="60px" alt="<%=mo.getName() %>"
-				src=""></td>
+			<td><img height="140px" width="160px" alt="<%=mo.getName()%>"
+				src="data:image/jpeg;base64,<%=Base64.encodeBase64String(mo.getImg())%>"></td>
 			<td>
 				<button>Edit</button>
 			</td>
-			<td>
-				<button>Delete</button>
+			<td><a href="delete-movie?id=<%=mo.getId()%>"><button>Delete</button></a>
 			</td>
 		</tr>
 		<%

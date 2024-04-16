@@ -21,7 +21,7 @@ public class FetchbyLanguage extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String lang=req.getParameter("lang");
+		String lang=req.getParameter("language");
 		MoviesDao dao=new MoviesDao();
 		List<Movies> list=dao.lang(lang);
 		if(list.isEmpty()) {

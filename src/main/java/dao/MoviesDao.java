@@ -58,4 +58,14 @@ public class MoviesDao {
 		manager.remove(manager.find(Movies.class, id));
 		transaction.commit();
 	}
+	
+	public Movies findmovie(int id) {
+		return manager.find(Movies.class, id);
+	}
+	
+	public void updatemovie(Movies movies) {
+		transaction.begin();
+		manager.merge(movies);
+		transaction.commit();
+	}
 }

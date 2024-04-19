@@ -102,7 +102,7 @@ a {
 				<td><%=mo.getRating()%></td>
 				<td><img height="140px" width="160px" alt="<%=mo.getName()%>"
 					src="data:image/jpeg;base64,<%=Base64.encodeBase64String(mo.getImg())%>"></td>
-				<td><button>Edit</button></td>
+				<td><a href="updating-movie?obj=<%=mo.getId()%>"><button>Edit</button></a></td>
 				<td><a href="delete-movie?id=<%=mo.getId()%>"><button>Delete</button></a></td>
 			</tr>
 			<%
@@ -111,7 +111,7 @@ a {
 		</tbody>
 	</table>
 	<div class="btn-container">
-		<a href="home.html"><button>Back</button></a>
+		<a href="javascript:history.back()"><button>Back</button></a>
 	</div>
 </body>
 </html>

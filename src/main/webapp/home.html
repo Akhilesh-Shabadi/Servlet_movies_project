@@ -5,58 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Movie Collection</title>
 <style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-  }
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #f9f9f9;
+	margin: 0;
+	padding: 0;
+}
 
-  h1 {
-    text-align: center;
-    color: #333;
-    margin-top: 20px;
-    font-size: 28px;
-    text-transform: uppercase;
-  }
+h1 {
+	text-align: center;
+	color: #333;
+	margin-top: 20px;
+	font-size: 28px;
+	text-transform: uppercase;
+}
 
-  .collection {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  }
+.collection {
+	max-width: 600px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
 
-  .collection a {
-    display: block;
-    margin-bottom: 15px;
-    text-align: center;
-    text-decoration: none;
-  }
+.collection a {
+	display: block;
+	margin-bottom: 15px;
+	text-align: center;
+	text-decoration: none;
+}
 
-  .collection button {
-    display: block;
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 5px;
-    background-color: #e91e63;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+.collection button {
+	display: block;
+	width: 100%;
+	padding: 14px;
+	border: none;
+	border-radius: 5px;
+	background-color: #e91e63;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
 
-  .collection button:hover {
-    background-color: #c2185b;
-  }
+.collection button:hover {
+	background-color: #c2185b;
+}
 </style>
 </head>
 <body>
-    <h1>Movie Collection</h1>
+	<h1>Movie Collection</h1>
     <div class="collection">
         <a href="insert-movie"><button style="background-color: #4CAF50;">Add Movie</button></a>
         <a href="fetchall"><button style="background-color: #ff9800;">View All Movies</button></a>
@@ -65,6 +65,9 @@
         <a href="enter-id"><button style="background-color: #FF5722;">View by ID</button></a>
         <a href="enter-lang"><button style="background-color: #795548;">View by Language</button></a>
         <a href="enter-genre"><button style="background-color: #607D8B;">View by Genre</button></a>
+        <a href="404error"><button style="background-color: #EE5DB4;">404-Error</button></a>
+        <a href="405error"><button style="background-color: #B55B08;">405-Method miss match</button></a>
+        <a href="500error"><button style="background-color: #23DDd5;">500-Internal server error</button></a>
     </div>
 </body>
 </html>
